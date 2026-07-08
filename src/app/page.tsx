@@ -7,11 +7,25 @@ import ExportActions from '../components/ExportActions';
 
 export default function Home() {
   const [selectedCore, setSelectedCore] = useState<string>('');
+  const [selectedPe1Subject, setSelectedPe1Subject] = useState<string>('');
   const [selectedPe1, setSelectedPe1] = useState<string>('');
+  const [selectedPe2Subject, setSelectedPe2Subject] = useState<string>('');
   const [selectedPe2, setSelectedPe2] = useState<string>('');
   const [viewMode, setViewMode] = useState<'weekly' | 'daily'>('daily');
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
   const [isMounted, setIsMounted] = useState(false);
+
+  // Helper to find elective subject category based on section code
+  const findElectiveSubject = (section: string, type: 'pe1' | 'pe2'): string => {
+    if (!section) return '';
+    const categoryData = timetableData[type];
+    for (const category of Object.keys(categoryData)) {
+      if ((categoryData as any)[category][section]) {
+        return category;
+      }
+    }
+    return '';
+  };
 
   // Load options once and sort them naturally (e.g. CS2 before CS10)
   const coreOptions = useMemo(() => {
@@ -20,41 +34,42 @@ export default function Home() {
     );
   }, []);
 
-  const pe1Options = useMemo(() => {
-    const groups: Record<string, string[]> = {};
-    Object.keys(timetableData.pe1).forEach(category => {
-      const subgroups = Object.keys((timetableData.pe1 as any)[category]).sort((a, b) =>
-        a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
-      );
-      groups[category] = subgroups;
-    });
-    return groups;
-  }, []);
+  const pe1Subjects = useMemo(() => Object.keys(timetableData.pe1).sort(), []);
+  const pe2Subjects = useMemo(() => Object.keys(timetableData.pe2).sort(), []);
 
-  const pe2Options = useMemo(() => {
-    const groups: Record<string, string[]> = {};
-    Object.keys(timetableData.pe2).forEach(category => {
-      const subgroups = Object.keys((timetableData.pe2 as any)[category]).sort((a, b) =>
-        a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
-      );
-      groups[category] = subgroups;
-    });
-    return groups;
-  }, []);
+  const pe1Sections = useMemo(() => {
+    if (!selectedPe1Subject) return [];
+    return Object.keys((timetableData.pe1 as any)[selectedPe1Subject]).sort((a, b) =>
+      a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
+    );
+  }, [selectedPe1Subject]);
+
+  const pe2Sections = useMemo(() => {
+    if (!selectedPe2Subject) return [];
+    return Object.keys((timetableData.pe2 as any)[selectedPe2Subject]).sort((a, b) =>
+      a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
+    );
+  }, [selectedPe2Subject]);
 
   // Handle mounting and state restoration from localStorage
   useEffect(() => {
     setIsMounted(true);
     
-    const savedCore = localStorage.getItem('tt_selected_core');
-    const savedPe1 = localStorage.getItem('tt_selected_pe1');
-    const savedPe2 = localStorage.getItem('tt_selected_pe2');
+    const savedCore = localStorage.getItem('tt_selected_core') || '';
+    const savedPe1 = localStorage.getItem('tt_selected_pe1') || '';
+    const savedPe2 = localStorage.getItem('tt_selected_pe2') || '';
     const savedView = localStorage.getItem('tt_view_mode');
     const savedTheme = localStorage.getItem('tt_theme');
     
     if (savedCore) setSelectedCore(savedCore);
-    if (savedPe1) setSelectedPe1(savedPe1);
-    if (savedPe2) setSelectedPe2(savedPe2);
+    if (savedPe1) {
+      setSelectedPe1(savedPe1);
+      setSelectedPe1Subject(findElectiveSubject(savedPe1, 'pe1'));
+    }
+    if (savedPe2) {
+      setSelectedPe2(savedPe2);
+      setSelectedPe2Subject(findElectiveSubject(savedPe2, 'pe2'));
+    }
     if (savedView === 'weekly' || savedView === 'daily') setViewMode(savedView);
     if (savedTheme === 'light' || savedTheme === 'dark') setTheme(savedTheme);
   }, []);
@@ -76,16 +91,34 @@ export default function Home() {
     localStorage.setItem('tt_selected_core', val);
   };
 
-  const handlePe1Change = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  const handlePe1SelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const val = e.target.value;
-    setSelectedPe1(val);
-    localStorage.setItem('tt_selected_pe1', val);
+    if (val === 'BACK') {
+      setSelectedPe1Subject('');
+      setSelectedPe1('');
+      localStorage.removeItem('tt_selected_pe1');
+    } else if (!selectedPe1Subject) {
+      setSelectedPe1Subject(val);
+      setSelectedPe1('');
+    } else {
+      setSelectedPe1(val);
+      localStorage.setItem('tt_selected_pe1', val);
+    }
   };
 
-  const handlePe2Change = (e: React.ChangeEvent<HTMLSelectElement>) => {
+  const handlePe2SelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const val = e.target.value;
-    setSelectedPe2(val);
-    localStorage.setItem('tt_selected_pe2', val);
+    if (val === 'BACK') {
+      setSelectedPe2Subject('');
+      setSelectedPe2('');
+      localStorage.removeItem('tt_selected_pe2');
+    } else if (!selectedPe2Subject) {
+      setSelectedPe2Subject(val);
+      setSelectedPe2('');
+    } else {
+      setSelectedPe2(val);
+      localStorage.setItem('tt_selected_pe2', val);
+    }
   };
 
   const toggleViewMode = (mode: 'weekly' | 'daily') => {
@@ -187,20 +220,28 @@ export default function Home() {
             <label htmlFor="pe1-select">Professional Elective 1 (PE-1)</label>
             <select
               id="pe1-select"
-              value={selectedPe1}
-              onChange={handlePe1Change}
+              value={selectedPe1Subject ? selectedPe1 : ""}
+              onChange={handlePe1SelectChange}
               className="custom-select"
             >
-              <option value="">-- None / Select PE-1 --</option>
-              {Object.keys(pe1Options).sort().map(category => (
-                <optgroup key={category} label={category}>
-                  {pe1Options[category].map(opt => (
+              {!selectedPe1Subject ? (
+                <>
+                  <option value="">-- Choose PE-1 Subject --</option>
+                  {pe1Subjects.map(sub => (
+                    <option key={sub} value={sub}>{sub}</option>
+                  ))}
+                </>
+              ) : (
+                <>
+                  <option value="BACK">← Back to Subjects</option>
+                  <option value="">-- Choose {selectedPe1Subject} Section --</option>
+                  {pe1Sections.map(opt => (
                     <option key={opt} value={opt}>
                       {formatLabel(opt)}
                     </option>
                   ))}
-                </optgroup>
-              ))}
+                </>
+              )}
             </select>
           </div>
 
@@ -209,20 +250,28 @@ export default function Home() {
             <label htmlFor="pe2-select">Professional Elective 2 (PE-2)</label>
             <select
               id="pe2-select"
-              value={selectedPe2}
-              onChange={handlePe2Change}
+              value={selectedPe2Subject ? selectedPe2 : ""}
+              onChange={handlePe2SelectChange}
               className="custom-select"
             >
-              <option value="">-- None / Select PE-2 --</option>
-              {Object.keys(pe2Options).sort().map(category => (
-                <optgroup key={category} label={category}>
-                  {pe2Options[category].map(opt => (
+              {!selectedPe2Subject ? (
+                <>
+                  <option value="">-- Choose PE-2 Subject --</option>
+                  {pe2Subjects.map(sub => (
+                    <option key={sub} value={sub}>{sub}</option>
+                  ))}
+                </>
+              ) : (
+                <>
+                  <option value="BACK">← Back to Subjects</option>
+                  <option value="">-- Choose {selectedPe2Subject} Section --</option>
+                  {pe2Sections.map(opt => (
                     <option key={opt} value={opt}>
                       {formatLabel(opt)}
                     </option>
                   ))}
-                </optgroup>
-              ))}
+                </>
+              )}
             </select>
           </div>
         </div>
