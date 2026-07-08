@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "5th Sem CSE Timetable Planner & Downloader",
+  title: "5th Sem CSE Timetable Downloader",
   description: "Filter and download your personalized 5th-semester core CSE and PE1/PE2 elective timetable instantly as PDF or high-quality Image.",
 };
 
