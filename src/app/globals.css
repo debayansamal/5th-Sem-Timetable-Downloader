@@ -217,14 +217,25 @@ body::before {
   box-shadow: 0 0 0 3px var(--primary-glow);
 }
 
-.custom-select option {
+.custom-select option,
+.custom-select optgroup {
   background: var(--select-option-bg);
   color: var(--text-main);
 }
 
-body.light-theme .custom-select option {
+.custom-select optgroup {
+  color: var(--text-muted);
+  font-weight: bold;
+}
+
+body.light-theme .custom-select option,
+body.light-theme .custom-select optgroup {
   background: #ffffff;
   color: #051F20;
+}
+
+body.light-theme .custom-select optgroup {
+  color: #235E47;
 }
 
 /* Action Buttons */

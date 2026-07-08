@@ -21,27 +21,25 @@ export default function Home() {
   }, []);
 
   const pe1Options = useMemo(() => {
-    const options: string[] = [];
+    const groups: Record<string, string[]> = {};
     Object.keys(timetableData.pe1).forEach(category => {
-      Object.keys((timetableData.pe1 as any)[category]).forEach(subgroup => {
-        options.push(subgroup);
-      });
+      const subgroups = Object.keys((timetableData.pe1 as any)[category]).sort((a, b) =>
+        a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
+      );
+      groups[category] = subgroups;
     });
-    return options.sort((a, b) =>
-      a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
-    );
+    return groups;
   }, []);
 
   const pe2Options = useMemo(() => {
-    const options: string[] = [];
+    const groups: Record<string, string[]> = {};
     Object.keys(timetableData.pe2).forEach(category => {
-      Object.keys((timetableData.pe2 as any)[category]).forEach(subgroup => {
-        options.push(subgroup);
-      });
+      const subgroups = Object.keys((timetableData.pe2 as any)[category]).sort((a, b) =>
+        a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
+      );
+      groups[category] = subgroups;
     });
-    return options.sort((a, b) =>
-      a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
-    );
+    return groups;
   }, []);
 
   // Handle mounting and state restoration from localStorage
@@ -194,10 +192,14 @@ export default function Home() {
               className="custom-select"
             >
               <option value="">-- None / Select PE-1 --</option>
-              {pe1Options.map(opt => (
-                <option key={opt} value={opt}>
-                  {formatLabel(opt)}
-                </option>
+              {Object.keys(pe1Options).sort().map(category => (
+                <optgroup key={category} label={category}>
+                  {pe1Options[category].map(opt => (
+                    <option key={opt} value={opt}>
+                      {formatLabel(opt)}
+                    </option>
+                  ))}
+                </optgroup>
               ))}
             </select>
           </div>
@@ -212,10 +214,14 @@ export default function Home() {
               className="custom-select"
             >
               <option value="">-- None / Select PE-2 --</option>
-              {pe2Options.map(opt => (
-                <option key={opt} value={opt}>
-                  {formatLabel(opt)}
-                </option>
+              {Object.keys(pe2Options).sort().map(category => (
+                <optgroup key={category} label={category}>
+                  {pe2Options[category].map(opt => (
+                    <option key={opt} value={opt}>
+                      {formatLabel(opt)}
+                    </option>
+                  ))}
+                </optgroup>
               ))}
             </select>
           </div>
