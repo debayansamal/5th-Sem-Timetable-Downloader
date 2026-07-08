@@ -136,7 +136,7 @@ function buildExportHTML(
 
 
   return `
-    <div style="font-family:'Segoe UI',Arial,sans-serif;background:#ffffff;padding:20px;width:794px;">
+    <div style="font-family:'Segoe UI',Arial,sans-serif;background:#ffffff;padding:20px;width:960px;">
       <div style="margin-bottom:14px;">
         <h1 style="font-size:16px;font-weight:800;color:#051F20;margin:0 0 4px 0;letter-spacing:-0.03em;">5TH SEM TIMETABLE</h1>
         <p style="font-size:10px;color:#235E47;margin:0;">
@@ -189,7 +189,7 @@ export default function ExportActions({ targetId, fileName, selectedCore, select
       scale: 3,
       useCORS: true,
       logging: false,
-      width: 794,
+      width: 960,
       height: innerEl.scrollHeight,
     });
 

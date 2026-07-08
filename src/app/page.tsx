@@ -280,7 +280,7 @@ export default function Home() {
         textAlign: 'center', 
         color: 'var(--text-muted)', 
         fontSize: '0.9rem', 
-        marginTop: '3rem', 
+        marginTop: 'auto', 
         padding: '1.5rem 0',
         display: 'flex',
         flexDirection: 'column',

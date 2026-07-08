@@ -123,6 +123,7 @@ body::before {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  min-height: 100vh;
 }
 
 /* Header & Glass Card styling */
