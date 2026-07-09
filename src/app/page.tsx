@@ -4,28 +4,15 @@ import React, { useState, useEffect, useMemo } from 'react';
 import timetableData from '../data/timetable_data.json';
 import TimetableGrid from '../components/TimetableGrid';
 import ExportActions from '../components/ExportActions';
+import CustomDropdown from '../components/CustomDropdown';
 
 export default function Home() {
   const [selectedCore, setSelectedCore] = useState<string>('');
-  const [selectedPe1Subject, setSelectedPe1Subject] = useState<string>('');
   const [selectedPe1, setSelectedPe1] = useState<string>('');
-  const [selectedPe2Subject, setSelectedPe2Subject] = useState<string>('');
   const [selectedPe2, setSelectedPe2] = useState<string>('');
   const [viewMode, setViewMode] = useState<'weekly' | 'daily'>('daily');
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
   const [isMounted, setIsMounted] = useState(false);
-
-  // Helper to find elective subject category based on section code
-  const findElectiveSubject = (section: string, type: 'pe1' | 'pe2'): string => {
-    if (!section) return '';
-    const categoryData = timetableData[type];
-    for (const category of Object.keys(categoryData)) {
-      if ((categoryData as any)[category][section]) {
-        return category;
-      }
-    }
-    return '';
-  };
 
   // Load options once and sort them naturally (e.g. CS2 before CS10)
   const coreOptions = useMemo(() => {
@@ -34,22 +21,27 @@ export default function Home() {
     );
   }, []);
 
-  const pe1Subjects = useMemo(() => Object.keys(timetableData.pe1).sort(), []);
-  const pe2Subjects = useMemo(() => Object.keys(timetableData.pe2).sort(), []);
+  const pe1Options = useMemo(() => {
+    const groups: Record<string, string[]> = {};
+    Object.keys(timetableData.pe1).forEach(category => {
+      const subgroups = Object.keys((timetableData.pe1 as any)[category]).sort((a, b) =>
+        a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
+      );
+      groups[category] = subgroups;
+    });
+    return groups;
+  }, []);
 
-  const pe1Sections = useMemo(() => {
-    if (!selectedPe1Subject) return [];
-    return Object.keys((timetableData.pe1 as any)[selectedPe1Subject]).sort((a, b) =>
-      a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
-    );
-  }, [selectedPe1Subject]);
-
-  const pe2Sections = useMemo(() => {
-    if (!selectedPe2Subject) return [];
-    return Object.keys((timetableData.pe2 as any)[selectedPe2Subject]).sort((a, b) =>
-      a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
-    );
-  }, [selectedPe2Subject]);
+  const pe2Options = useMemo(() => {
+    const groups: Record<string, string[]> = {};
+    Object.keys(timetableData.pe2).forEach(category => {
+      const subgroups = Object.keys((timetableData.pe2 as any)[category]).sort((a, b) =>
+        a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' })
+      );
+      groups[category] = subgroups;
+    });
+    return groups;
+  }, []);
 
   // Handle mounting and state restoration from localStorage
   useEffect(() => {
@@ -62,14 +54,8 @@ export default function Home() {
     const savedTheme = localStorage.getItem('tt_theme');
     
     if (savedCore) setSelectedCore(savedCore);
-    if (savedPe1) {
-      setSelectedPe1(savedPe1);
-      setSelectedPe1Subject(findElectiveSubject(savedPe1, 'pe1'));
-    }
-    if (savedPe2) {
-      setSelectedPe2(savedPe2);
-      setSelectedPe2Subject(findElectiveSubject(savedPe2, 'pe2'));
-    }
+    if (savedPe1) setSelectedPe1(savedPe1);
+    if (savedPe2) setSelectedPe2(savedPe2);
     if (savedView === 'weekly' || savedView === 'daily') setViewMode(savedView);
     if (savedTheme === 'light' || savedTheme === 'dark') setTheme(savedTheme);
   }, []);
@@ -85,40 +71,19 @@ export default function Home() {
   }, [theme, isMounted]);
 
   // Sync state changes with localStorage
-  const handleCoreChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const val = e.target.value;
+  const handleCoreChange = (val: string) => {
     setSelectedCore(val);
     localStorage.setItem('tt_selected_core', val);
   };
 
-  const handlePe1SelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const val = e.target.value;
-    if (val === 'BACK') {
-      setSelectedPe1Subject('');
-      setSelectedPe1('');
-      localStorage.removeItem('tt_selected_pe1');
-    } else if (!selectedPe1Subject) {
-      setSelectedPe1Subject(val);
-      setSelectedPe1('');
-    } else {
-      setSelectedPe1(val);
-      localStorage.setItem('tt_selected_pe1', val);
-    }
+  const handlePe1Change = (val: string) => {
+    setSelectedPe1(val);
+    localStorage.setItem('tt_selected_pe1', val);
   };
 
-  const handlePe2SelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const val = e.target.value;
-    if (val === 'BACK') {
-      setSelectedPe2Subject('');
-      setSelectedPe2('');
-      localStorage.removeItem('tt_selected_pe2');
-    } else if (!selectedPe2Subject) {
-      setSelectedPe2Subject(val);
-      setSelectedPe2('');
-    } else {
-      setSelectedPe2(val);
-      localStorage.setItem('tt_selected_pe2', val);
-    }
+  const handlePe2Change = (val: string) => {
+    setSelectedPe2(val);
+    localStorage.setItem('tt_selected_pe2', val);
   };
 
   const toggleViewMode = (mode: 'weekly' | 'daily') => {
@@ -195,85 +160,37 @@ export default function Home() {
       </header>
 
       {/* Selectors and Preferences panel */}
-      <section className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+      <section className="glass-card" style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem', zIndex: 10 }}>
         <div className="selectors-grid" style={{ marginBottom: 0 }}>
           {/* Core CSE Section selector */}
-          <div className="select-group">
-            <label htmlFor="core-select">CSE Core Section</label>
-            <select
-              id="core-select"
-              value={selectedCore}
-              onChange={handleCoreChange}
-              className="custom-select"
-            >
-              <option value="">-- Choose CSE Section --</option>
-              {coreOptions.map(opt => (
-                <option key={opt} value={opt}>
-                  {formatLabel(opt)}
-                </option>
-              ))}
-            </select>
-          </div>
+          <CustomDropdown
+            label="CSE Core Section"
+            placeholder="-- Choose CSE Section --"
+            value={selectedCore}
+            onChange={handleCoreChange}
+            options={coreOptions}
+            formatLabel={formatLabel}
+          />
 
           {/* PE1 elective selector */}
-          <div className="select-group">
-            <label htmlFor="pe1-select">Professional Elective 1 (PE-1)</label>
-            <select
-              id="pe1-select"
-              value={selectedPe1Subject ? selectedPe1 : ""}
-              onChange={handlePe1SelectChange}
-              className="custom-select"
-            >
-              {!selectedPe1Subject ? (
-                <>
-                  <option value="">-- Choose PE-1 Subject --</option>
-                  {pe1Subjects.map(sub => (
-                    <option key={sub} value={sub}>{sub}</option>
-                  ))}
-                </>
-              ) : (
-                <>
-                  <option value="BACK">← Back to Subjects</option>
-                  <option value="">-- Choose {selectedPe1Subject} Section --</option>
-                  {pe1Sections.map(opt => (
-                    <option key={opt} value={opt}>
-                      {formatLabel(opt)}
-                    </option>
-                  ))}
-                </>
-              )}
-            </select>
-          </div>
+          <CustomDropdown
+            label="Professional Elective 1 (PE-1)"
+            placeholder="-- Choose PE-1 Section --"
+            value={selectedPe1}
+            onChange={handlePe1Change}
+            groupedOptions={pe1Options}
+            formatLabel={formatLabel}
+          />
 
           {/* PE2 elective selector */}
-          <div className="select-group">
-            <label htmlFor="pe2-select">Professional Elective 2 (PE-2)</label>
-            <select
-              id="pe2-select"
-              value={selectedPe2Subject ? selectedPe2 : ""}
-              onChange={handlePe2SelectChange}
-              className="custom-select"
-            >
-              {!selectedPe2Subject ? (
-                <>
-                  <option value="">-- Choose PE-2 Subject --</option>
-                  {pe2Subjects.map(sub => (
-                    <option key={sub} value={sub}>{sub}</option>
-                  ))}
-                </>
-              ) : (
-                <>
-                  <option value="BACK">← Back to Subjects</option>
-                  <option value="">-- Choose {selectedPe2Subject} Section --</option>
-                  {pe2Sections.map(opt => (
-                    <option key={opt} value={opt}>
-                      {formatLabel(opt)}
-                    </option>
-                  ))}
-                </>
-              )}
-            </select>
-          </div>
+          <CustomDropdown
+            label="Professional Elective 2 (PE-2)"
+            placeholder="-- Choose PE-2 Section --"
+            value={selectedPe2}
+            onChange={handlePe2Change}
+            groupedOptions={pe2Options}
+            formatLabel={formatLabel}
+          />
         </div>
 
         {/* Download section: ONLY displayed if all 3 data are selected! */}
