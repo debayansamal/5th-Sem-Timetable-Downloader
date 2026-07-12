@@ -134,6 +134,31 @@ export default function Home() {
       {/* Top Banner with Dark/Light Toggle */}
       <header className="glass-card app-header">
         <div className="logo-section">
+          <div style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '0.4rem',
+            background: 'linear-gradient(90deg, #0d3d2a 0%, #1a6b45 40%, #22c55e 60%, #1a6b45 80%, #0d3d2a 100%)',
+            backgroundSize: '200% 100%',
+            animation: 'shimmerBadge 2.5s ease-in-out infinite',
+            border: '1px solid rgba(34,197,94,0.5)',
+            borderRadius: '999px',
+            padding: '0.25rem 0.75rem',
+            marginBottom: '0.5rem',
+            boxShadow: '0 0 10px rgba(34,197,94,0.3)',
+          }}>
+            <span style={{
+              width: '6px', height: '6px',
+              borderRadius: '50%',
+              background: '#4ade80',
+              boxShadow: '0 0 6px #4ade80',
+              display: 'inline-block',
+              animation: 'pulse 1.5s ease-in-out infinite',
+            }} />
+            <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#86efac', letterSpacing: '0.04em', whiteSpace: 'nowrap' }}>
+              Updated (w.e.f. 13th July 2026)
+            </span>
+          </div>
           <h1>5th Sem Timetable</h1>
           <p>Instantly search, view, and download your weekly timetable</p>
         </div>
