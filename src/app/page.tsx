@@ -153,7 +153,7 @@ export default function Home() {
               flexShrink: 0,
             }} />
             <span style={{ fontSize: '0.72rem', fontWeight: 700, color: '#86efac', letterSpacing: '0.05em' }}>
-              Updated
+              Updated (w.e.f. 15th July 2026)
             </span>
           </div>
           <h1>5th Sem Timetable</h1>
