@@ -101,6 +101,10 @@ function buildExportHTML(
       if (classes.length === 0) return `<td style="padding:0;border:1px solid #e2e8f0;background:#f8fafc;width:0;"></td>`;
       const cards = classes.map(cls => {
         const col = getSubjectColor(cls.subject);
+        const isLab = /L$/.test(cls.subject.trim().toUpperCase());
+        const labBadge = isLab
+          ? `<div style="position:absolute;top:4px;right:5px;background:${col.border};color:#fff;font-size:7px;font-weight:800;padding:1px 5px;border-radius:3px;letter-spacing:0.04em;line-height:1.4;">Lab</div>`
+          : '';
         return `
           <div style="
             background:${col.bg};
@@ -112,6 +116,7 @@ function buildExportHTML(
             overflow:hidden;
           ">
             <div style="position:absolute;left:0;top:0;bottom:0;width:4px;background:${col.border};border-radius:4px 0 0 4px;"></div>
+            ${labBadge}
             <div style="padding-left:8px;">
               <div style="font-weight:700;font-size:11px;color:${col.text};line-height:1.3;">${cls.subject}</div>
               <div style="font-size:9px;color:#475569;margin-top:2px;line-height:1.3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100px;">${cls.teacher.split('\n')[0]}</div>
