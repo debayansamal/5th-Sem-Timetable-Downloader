@@ -19,12 +19,13 @@ const PERIOD_TIMES: Record<string, string> = {
 };
 
 // Unique, accessible, light-background subject colors (like a calendar)
+// Lab subjects (suffix L) use the same hue as their theory counterpart but lighter/more washed out
 const SUBJECT_COLORS: Record<string, { bg: string; border: string; text: string; label: string }> = {
   'DAA':   { bg: '#e8f4fd', border: '#3b82f6', text: '#1e3a5f', label: '#3b82f6' },
-  'DAAL':  { bg: '#fce8f3', border: '#ec4899', text: '#5b1a3a', label: '#ec4899' },
+  'DAAL':  { bg: '#eff6ff', border: '#93c5fd', text: '#1e3a5f', label: '#60a5fa' }, // lighter blue — same family as DAA
   'SE':    { bg: '#e8fdf0', border: '#10b981', text: '#065f46', label: '#10b981' },
   'CN':    { bg: '#fdf8e8', border: '#f59e0b', text: '#5c3f00', label: '#f59e0b' },
-  'CNL':   { bg: '#fff3e8', border: '#f97316', text: '#7c2d12', label: '#f97316' },
+  'CNL':   { bg: '#fffbeb', border: '#fcd34d', text: '#5c3f00', label: '#fbbf24' }, // lighter amber — same family as CN
   'EE':    { bg: '#f3e8fd', border: '#8b5cf6', text: '#4c1d95', label: '#8b5cf6' },
   'HPC':   { bg: '#e8fdfc', border: '#06b6d4', text: '#164e63', label: '#06b6d4' },
   'DMDW':  { bg: '#fde8ea', border: '#ef4444', text: '#7f1d1d', label: '#ef4444' },
