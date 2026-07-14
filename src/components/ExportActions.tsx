@@ -44,7 +44,8 @@ const SUBJECT_COLORS: Record<string, { bg: string; border: string; text: string;
 const DEFAULT_COLOR = { bg: '#f0f4f8', border: '#94a3b8', text: '#1e293b', label: '#64748b' };
 
 function getSubjectColor(subject: string) {
-  for (const key of Object.keys(SUBJECT_COLORS)) {
+  const keys = Object.keys(SUBJECT_COLORS).sort((a, b) => b.length - a.length);
+  for (const key of keys) {
     if (subject.toUpperCase().startsWith(key)) return SUBJECT_COLORS[key];
   }
   return DEFAULT_COLOR;
