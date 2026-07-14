@@ -160,7 +160,7 @@
           "period": "P2",
           "time": "09:00 - 10:00",
           "subject": "CN",
-          "teacher": "Mr. Arup Sarkar",
+          "teacher": "Dr. Arup Sarkar",
           "room": "C25-A210"
         },
         {
@@ -197,7 +197,7 @@
           "period": "P4",
           "time": "11:00 - 12:00",
           "subject": "CN",
-          "teacher": "Mr. Arup Sarkar",
+          "teacher": "Dr. Arup Sarkar",
           "room": "C25-A116"
         }
       ],
@@ -213,14 +213,14 @@
           "period": "P2",
           "time": "09:00 - 10:00",
           "subject": "CNL",
-          "teacher": "Mr. Arup Sarkar",
+          "teacher": "Dr. Arup Sarkar",
           "room": "C25-A103"
         },
         {
           "period": "P3",
           "time": "10:00 - 11:00",
           "subject": "CNL",
-          "teacher": "Mr. Arup Sarkar",
+          "teacher": "Dr. Arup Sarkar",
           "room": "C25-A103"
         },
         {
@@ -236,7 +236,7 @@
           "period": "P1",
           "time": "08:00 - 09:00",
           "subject": "CN",
-          "teacher": "Mr. Arup Sarkar",
+          "teacher": "Dr. Arup Sarkar",
           "room": "C25-A116"
         },
         {
@@ -683,23 +683,23 @@
         {
           "period": "P1",
           "time": "08:00 - 09:00",
-          "subject": "SE",
-          "teacher": "Ms. Sarita Mishra",
-          "room": "C25-A211"
+          "subject": "DAA",
+          "teacher": "Dr. Kumar Surjeet Chaudhury",
+          "room": "C25-B208"
         },
         {
           "period": "P2",
           "time": "09:00 - 10:00",
-          "subject": "DAA",
-          "teacher": "Dr. Kumar Surjeet Chaudhury",
-          "room": "C25-A211"
+          "subject": "CN",
+          "teacher": "Ms. Tulsi Aakanksha",
+          "room": "C25-B208"
         },
         {
           "period": "P3",
           "time": "10:00 - 11:00",
-          "subject": "CN",
-          "teacher": "Ms. Tulsi Aakanksha",
-          "room": "C25-A211"
+          "subject": "SE",
+          "teacher": "Ms. Sarita Mishra",
+          "room": "C25-B208"
         }
       ],
       "Wednesday": [
@@ -1223,15 +1223,15 @@
         {
           "period": "P1",
           "time": "08:00 - 09:00",
-          "subject": "CN",
-          "teacher": "Dr. Ashish Singh",
+          "subject": "EE",
+          "teacher": "Dr. Suvendu Barik",
           "room": "C25-A206"
         },
         {
           "period": "P2",
           "time": "09:00 - 10:00",
-          "subject": "EE",
-          "teacher": "Dr. Suvendu Barik",
+          "subject": "CN",
+          "teacher": "Dr. Ashish Singh",
           "room": "C25-A206"
         },
         {
@@ -1623,8 +1623,8 @@
         {
           "period": "P1",
           "time": "08:00 - 09:00",
-          "subject": "SE",
-          "teacher": "Dr. Krishna Chakravarty",
+          "subject": "CN",
+          "teacher": "Ms. Tulsi Aakanksha",
           "room": "C25-A015"
         },
         {
@@ -1644,9 +1644,9 @@
         {
           "period": "P4",
           "time": "11:00 - 12:00",
-          "subject": "CN",
-          "teacher": "Ms. Tulsi Aakanksha",
-          "room": "C25-B301"
+          "subject": "SE",
+          "teacher": "Dr. Krishna Chakravarty",
+          "room": "C25-B108"
         }
       ],
       "Thursday": [
@@ -1752,25 +1752,25 @@
       ],
       "Wednesday": [
         {
-          "period": "P1",
-          "time": "08:00 - 09:00",
-          "subject": "EE",
-          "teacher": "Dr. Suvendu Barik",
-          "room": "C25-B013"
-        },
-        {
           "period": "P2",
           "time": "09:00 - 10:00",
-          "subject": "CN",
-          "teacher": "Mr. Vishal Meena",
-          "room": "C25-B013"
+          "subject": "EE",
+          "teacher": "Dr. Suvendu Barik",
+          "room": "C25-B301"
         },
         {
           "period": "P3",
           "time": "10:00 - 11:00",
+          "subject": "CN",
+          "teacher": "Mr. Vishal Meena",
+          "room": "C25-B301"
+        },
+        {
+          "period": "P4",
+          "time": "11:00 - 12:00",
           "subject": "SE",
           "teacher": "Ms. Ipsita Paul",
-          "room": "C25-B013"
+          "room": "C25-B301"
         }
       ],
       "Thursday": [
@@ -3170,6 +3170,13 @@
       ],
       "Tuesday": [
         {
+          "period": "P1",
+          "time": "08:00 - 09:00",
+          "subject": "EE",
+          "teacher": "Dr. Gayatri Nayak",
+          "room": "C25-A115"
+        },
+        {
           "period": "P2",
           "time": "09:00 - 10:00",
           "subject": "DAAL",
@@ -3235,13 +3242,6 @@
           "subject": "DAA",
           "teacher": "Dr. Shaswati Patra",
           "room": "C25-A301"
-        },
-        {
-          "period": "P4",
-          "time": "11:00 - 12:00",
-          "subject": "EE",
-          "teacher": "Dr. Gayatri Nayak",
-          "room": "C25-A301"
         }
       ],
       "Friday": [
@@ -3262,15 +3262,15 @@
         {
           "period": "P3",
           "time": "10:00 - 11:00",
-          "subject": "CN",
-          "teacher": "Dr. Niranjan Kumar Ray",
+          "subject": "EE",
+          "teacher": "Dr. Gayatri Nayak",
           "room": "C25-A213"
         },
         {
           "period": "P4",
           "time": "11:00 - 12:00",
-          "subject": "EE",
-          "teacher": "Dr. Gayatri Nayak",
+          "subject": "CN",
+          "teacher": "Dr. Niranjan Kumar Ray",
           "room": "C25-A213"
         }
       ]
@@ -3333,22 +3333,22 @@
         {
           "period": "P2",
           "time": "09:00 - 10:00",
-          "subject": "CN",
-          "teacher": "Dr. Nitin Varyani",
+          "subject": "EE",
+          "teacher": "Dr. Gayatri Nayak",
           "room": "C25-A211"
         },
         {
           "period": "P3",
           "time": "10:00 - 11:00",
-          "subject": "DAA",
-          "teacher": "Dr. Jayashree Piri",
+          "subject": "CN",
+          "teacher": "Dr. Nitin Varyani",
           "room": "C25-A211"
         },
         {
           "period": "P4",
           "time": "11:00 - 12:00",
-          "subject": "EE",
-          "teacher": "Dr. Gayatri Nayak",
+          "subject": "DAA",
+          "teacher": "Dr. Jayashree Piri",
           "room": "C25-A211"
         }
       ],
@@ -3434,8 +3434,8 @@
         {
           "period": "P1",
           "time": "08:00 - 09:00",
-          "subject": "EE",
-          "teacher": "Dr. Gayatri Nayak",
+          "subject": "SE",
+          "teacher": "Prof. (Dr.) Prasant Kumar Pattnaik",
           "room": "C25-A313"
         },
         {
@@ -3448,8 +3448,8 @@
         {
           "period": "P3",
           "time": "10:00 - 11:00",
-          "subject": "SE",
-          "teacher": "Prof. (Dr.) Prasant Kumar Pattnaik",
+          "subject": "EE",
+          "teacher": "Dr. Gayatri Nayak",
           "room": "C25-A313"
         }
       ],
@@ -3673,23 +3673,23 @@
         {
           "period": "P1",
           "time": "08:00 - 09:00",
-          "subject": "SE",
-          "teacher": "Ms. Santisudha Panigrahi",
-          "room": "C25-B006"
+          "subject": "DAA",
+          "teacher": "Dr. Murari Mandal",
+          "room": "C25-B207"
         },
         {
           "period": "P2",
           "time": "09:00 - 10:00",
           "subject": "EE",
           "teacher": "Dr. Gayatri Nayak",
-          "room": "C25-B006"
+          "room": "C25-B207"
         },
         {
           "period": "P3",
           "time": "10:00 - 11:00",
-          "subject": "DAA",
-          "teacher": "Dr. Murari Mandal",
-          "room": "C25-B006"
+          "subject": "SE",
+          "teacher": "Ms. Santisudha Panigrahi",
+          "room": "C25-B207"
         }
       ],
       "Tuesday": [
@@ -4140,13 +4140,6 @@
       ],
       "Thursday": [
         {
-          "period": "P1",
-          "time": "08:00 - 09:00",
-          "subject": "DAA",
-          "teacher": "Ms. Indu",
-          "room": "C25-B016"
-        },
-        {
           "period": "P2",
           "time": "09:00 - 10:00",
           "subject": "EE",
@@ -4159,6 +4152,13 @@
           "subject": "SE",
           "teacher": "Dr. Siddharth Swarup Rautaray",
           "room": "C25-B016"
+        },
+        {
+          "period": "P4",
+          "time": "11:00 - 12:00",
+          "subject": "DAA",
+          "teacher": "Ms. Indu",
+          "room": "C25-B207"
         }
       ],
       "Friday": [
@@ -5420,13 +5420,6 @@
       ],
       "Wednesday": [
         {
-          "period": "P1",
-          "time": "08:00 - 09:00",
-          "subject": "CN",
-          "teacher": "Mr. Biraja Prasad Nayak",
-          "room": "C25-B106"
-        },
-        {
           "period": "P2",
           "time": "09:00 - 10:00",
           "subject": "EE",
@@ -5439,6 +5432,13 @@
           "subject": "SE",
           "teacher": "Dr. Manas Ranjan Nayak",
           "room": "C25-B106"
+        },
+        {
+          "period": "P4",
+          "time": "11:00 - 12:00",
+          "subject": "CN",
+          "teacher": "Mr. Biraja Prasad Nayak",
+          "room": "C25-B210"
         }
       ],
       "Thursday": [
@@ -5760,7 +5760,7 @@
           "time": "11:00 - 12:00",
           "subject": "CN",
           "teacher": "Mr. Ankit Raj",
-          "room": "C25-C011"
+          "room": "C25-B008"
         }
       ]
     },
@@ -5832,16 +5832,16 @@
           "subject": "EE",
           "teacher": "New Faculty 2 ee",
           "room": "C25-B108"
+        },
+        {
+          "period": "P4",
+          "time": "11:00 - 12:00",
+          "subject": "CN",
+          "teacher": "Mr. Rakesh Kumar Rai",
+          "room": "C25-A014"
         }
       ],
       "Thursday": [
-        {
-          "period": "P1",
-          "time": "08:00 - 09:00",
-          "subject": "SE",
-          "teacher": "Dr. Jayanta Mondal",
-          "room": "C25-B017"
-        },
         {
           "period": "P2",
           "time": "09:00 - 10:00",
@@ -5859,8 +5859,8 @@
         {
           "period": "P4",
           "time": "11:00 - 12:00",
-          "subject": "CN",
-          "teacher": "Mr. Rakesh Kumar Rai",
+          "subject": "SE",
+          "teacher": "Dr. Jayanta Mondal",
           "room": "C25-B322"
         }
       ],
@@ -6022,7 +6022,7 @@
           "time": "11:00 - 12:00",
           "subject": "SE",
           "teacher": "Prof. (Dr.) Santosh Kumar Swain",
-          "room": "C25-C012"
+          "room": "C25-B016"
         }
       ]
     },
@@ -6254,7 +6254,7 @@
           "time": "11:00 - 12:00",
           "subject": "DAA",
           "teacher": "Mrs. Chandani Kumari",
-          "room": "C25-C011"
+          "room": "C25-A301"
         }
       ],
       "Friday": [
@@ -6415,7 +6415,7 @@
           "time": "11:00 - 12:00",
           "subject": "DAA",
           "teacher": "Dr. Krishnendu Maity",
-          "room": "C25-C013"
+          "room": "C25-B020"
         }
       ]
     },
@@ -6523,7 +6523,7 @@
           "time": "11:00 - 12:00",
           "subject": "SE",
           "teacher": "Dr. Subhranshu Sekhar Tripathy",
-          "room": "C25-C012"
+          "room": "C25-B101"
         }
       ],
       "Friday": [
@@ -6624,7 +6624,7 @@
           "time": "11:00 - 12:00",
           "subject": "EE",
           "teacher": "New Faculty 3 ee",
-          "room": "C25-C011"
+          "room": "C25-B201"
         }
       ],
       "Thursday": [
@@ -6778,7 +6778,7 @@
           "time": "11:00 - 12:00",
           "subject": "SE",
           "teacher": "Mr. Soumya Sanket Patra",
-          "room": "C25-C013"
+          "room": "C25-B106"
         }
       ],
       "Friday": [
@@ -6808,7 +6808,7 @@
           "time": "11:00 - 12:00",
           "subject": "EE",
           "teacher": "New Faculty 3 ee",
-          "room": "C25-C211"
+          "room": "C25-B314"
         }
       ]
     },
@@ -6854,8 +6854,8 @@
         {
           "period": "P3",
           "time": "10:00 - 11:00",
-          "subject": "DAA",
-          "teacher": "Dr. Krishnendu Maity",
+          "subject": "CN",
+          "teacher": "Mr. Biraja Prasad Nayak",
           "room": "C25-B101"
         }
       ],
@@ -6884,9 +6884,9 @@
         {
           "period": "P4",
           "time": "11:00 - 12:00",
-          "subject": "CN",
-          "teacher": "Mr. Biraja Prasad Nayak",
-          "room": "C25-C012"
+          "subject": "DAA",
+          "teacher": "Dr. Krishnendu Maity",
+          "room": "C25-B208"
         }
       ],
       "Thursday": [
@@ -7070,7 +7070,7 @@
           "time": "11:00 - 12:00",
           "subject": "SE",
           "teacher": "Dr. Biswajeet Sethi",
-          "room": "C25-C212"
+          "room": "C25-B302"
         }
       ]
     },
@@ -7148,7 +7148,7 @@
           "time": "11:00 - 12:00",
           "subject": "EE",
           "teacher": "New Faculty 4 ee",
-          "room": "C25-C013"
+          "room": "C25-B009"
         }
       ],
       "Thursday": [
@@ -7302,7 +7302,7 @@
           "time": "11:00 - 12:00",
           "subject": "EE",
           "teacher": "New Faculty 4 ee",
-          "room": "C25-C211"
+          "room": "C25-B216"
         }
       ],
       "Friday": [
@@ -7403,7 +7403,7 @@
           "time": "11:00 - 12:00",
           "subject": "DAA",
           "teacher": "Dr. Himansu Das",
-          "room": "C25-C211"
+          "room": "C25-A202"
         }
       ],
       "Thursday": [
@@ -7463,7 +7463,7 @@
           "time": "11:00 - 12:00",
           "subject": "DAA",
           "teacher": "Dr. Himansu Das",
-          "room": "C25-C213"
+          "room": "C25-B303"
         }
       ]
     },
@@ -7695,7 +7695,7 @@
           "time": "11:00 - 12:00",
           "subject": "CN",
           "teacher": "Dr. Subhra Priyadarshini Biswal",
-          "room": "C25-C212"
+          "room": "C25-B312"
         }
       ],
       "Friday": [
@@ -7934,17 +7934,10 @@
           "time": "11:00 - 12:00",
           "subject": "EE",
           "teacher": "New Faculty 5 ee",
-          "room": "C25-C212"
+          "room": "C25-A203"
         }
       ],
       "Thursday": [
-        {
-          "period": "P1",
-          "time": "08:00 - 09:00",
-          "subject": "SE",
-          "teacher": "Mr. Sougatamoy Biswas",
-          "room": "C25-B110"
-        },
         {
           "period": "P2",
           "time": "09:00 - 10:00",
@@ -7958,6 +7951,13 @@
           "subject": "DAAL",
           "teacher": "Dr. Debachudamani Prusti",
           "room": "C25-B312"
+        },
+        {
+          "period": "P4",
+          "time": "11:00 - 12:00",
+          "subject": "SE",
+          "teacher": "Mr. Sougatamoy Biswas",
+          "room": "C25-B109"
         }
       ],
       "Friday": [
@@ -8343,7 +8343,7 @@
           "period": "P1",
           "time": "08:00 - 09:00",
           "subject": "CN",
-          "teacher": "Mr. Arup Sarkar",
+          "teacher": "Dr. Arup Sarkar",
           "room": "C25-A307"
         },
         {
@@ -8389,7 +8389,7 @@
           "period": "P1",
           "time": "08:00 - 09:00",
           "subject": "CN",
-          "teacher": "Mr. Arup Sarkar",
+          "teacher": "Dr. Arup Sarkar",
           "room": "C25-A316"
         },
         {
@@ -8433,7 +8433,7 @@
           "period": "P4",
           "time": "11:00 - 12:00",
           "subject": "CN",
-          "teacher": "Mr. Arup Sarkar",
+          "teacher": "Dr. Arup Sarkar",
           "room": "C25-B122"
         }
       ],
@@ -8449,14 +8449,14 @@
           "period": "P2",
           "time": "09:00 - 10:00",
           "subject": "CNL",
-          "teacher": "Mr. Arup Sarkar",
+          "teacher": "Dr. Arup Sarkar",
           "room": "C25-B304"
         },
         {
           "period": "P3",
           "time": "10:00 - 11:00",
           "subject": "CNL",
-          "teacher": "Mr. Arup Sarkar",
+          "teacher": "Dr. Arup Sarkar",
           "room": "C25-B304"
         },
         {
@@ -8506,13 +8506,6 @@
           "subject": "SE",
           "teacher": "Mr. Sovan Kumar Sahoo",
           "room": "C25-B115"
-        },
-        {
-          "period": "P3",
-          "time": "10:00 - 11:00",
-          "subject": "OB",
-          "teacher": "Mr. Sheikh Masud",
-          "room": "C25-B115"
         }
       ],
       "Wednesday": [
@@ -8542,10 +8535,17 @@
           "time": "11:00 - 12:00",
           "subject": "CN",
           "teacher": "Dr. Jay Sarraf",
-          "room": "C25-C213"
+          "room": "C25-A204"
         }
       ],
       "Thursday": [
+        {
+          "period": "P1",
+          "time": "08:00 - 09:00",
+          "subject": "OB",
+          "teacher": "Mr. Sheikh Masud",
+          "room": "C25-B201"
+        },
         {
           "period": "P2",
           "time": "09:00 - 10:00",
@@ -10121,7 +10121,7 @@
             "time": "12:00 - 13:00",
             "subject": "IPA",
             "teacher": "Dr. Santwana Sagnika",
-            "room": "C25-B010"
+            "room": "C25-B207"
           }
         ],
         "Thursday": [],
