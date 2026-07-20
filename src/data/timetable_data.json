@@ -7601,13 +7601,6 @@
     "CS59": {
       "Monday": [
         {
-          "period": "P1",
-          "time": "08:00 - 09:00",
-          "subject": "DAA",
-          "teacher": "Mrs. Lipika Mohanty",
-          "room": "C25-B108"
-        },
-        {
           "period": "P2",
           "time": "09:00 - 10:00",
           "subject": "SE",
@@ -7617,8 +7610,8 @@
         {
           "period": "P3",
           "time": "10:00 - 11:00",
-          "subject": "EE",
-          "teacher": "New Faculty 4 ee",
+          "subject": "DAA",
+          "teacher": "Mrs. Lipika Mohanty",
           "room": "C25-B108"
         }
       ],
@@ -7647,6 +7640,13 @@
       ],
       "Wednesday": [
         {
+          "period": "P1",
+          "time": "08:00 - 09:00",
+          "subject": "DAA",
+          "teacher": "Mrs. Lipika Mohanty",
+          "room": "C25-B122"
+        },
+        {
           "period": "P2",
           "time": "09:00 - 10:00",
           "subject": "CN",
@@ -7656,8 +7656,8 @@
         {
           "period": "P3",
           "time": "10:00 - 11:00",
-          "subject": "DAA",
-          "teacher": "Mrs. Lipika Mohanty",
+          "subject": "EE",
+          "teacher": "New Faculty 4 ee",
           "room": "C25-B122"
         },
         {
@@ -8017,19 +8017,26 @@
         {
           "period": "P4",
           "time": "11:00 - 12:00",
-          "subject": "SE",
-          "teacher": "Mr. Manas Ranjan Biswal",
+          "subject": "OB",
+          "teacher": "Dr. Jayalaxmi Samal",
           "room": "C25-A106"
         },
         {
           "period": "P5",
           "time": "12:00 - 13:00",
-          "subject": "OB",
-          "teacher": "Dr. Jayalaxmi Samal",
+          "subject": "SE",
+          "teacher": "Mr. Manas Ranjan Biswal",
           "room": "C25-A106"
         }
       ],
       "Tuesday": [
+        {
+          "period": "P1",
+          "time": "08:00 - 09:00",
+          "subject": "NIC",
+          "teacher": "Mr. Sayan Datta",
+          "room": "C25-A206"
+        },
         {
           "period": "P2",
           "time": "09:00 - 10:00",
@@ -8050,13 +8057,6 @@
           "subject": "CN",
           "teacher": "Dr. Jayanti Dansana",
           "room": "C25-A206"
-        },
-        {
-          "period": "P5",
-          "time": "12:00 - 13:00",
-          "subject": "NIC",
-          "teacher": "Mr. Sayan Datta",
-          "room": "C25-A301"
         }
       ],
       "Wednesday": [
@@ -8183,15 +8183,22 @@
         {
           "period": "P3",
           "time": "10:00 - 11:00",
-          "subject": "DAA",
-          "teacher": "Mrs. Lipika Mohanty",
+          "subject": "AI",
+          "teacher": "Prof.(Dr.) Madhabananda Das",
           "room": "C25-A207"
         },
         {
           "period": "P4",
           "time": "11:00 - 12:00",
-          "subject": "AI",
-          "teacher": "Prof.(Dr.) Madhabananda Das",
+          "subject": "DAA",
+          "teacher": "Mrs. Lipika Mohanty",
+          "room": "C25-A207"
+        },
+        {
+          "period": "P5",
+          "time": "12:00 - 13:00",
+          "subject": "OB",
+          "teacher": "Dr. Jayalaxmi Samal",
           "room": "C25-A207"
         }
       ],
@@ -8301,17 +8308,10 @@
       ],
       "Friday": [
         {
-          "period": "P1",
-          "time": "08:00 - 09:00",
-          "subject": "DAA",
-          "teacher": "Mrs. Lipika Mohanty",
-          "room": "C25-A101"
-        },
-        {
           "period": "P2",
           "time": "09:00 - 10:00",
-          "subject": "OB",
-          "teacher": "Dr. Jayalaxmi Samal",
+          "subject": "DAA",
+          "teacher": "Mrs. Lipika Mohanty",
           "room": "C25-A101"
         },
         {
@@ -9971,35 +9971,35 @@
         ]
       },
       "HPC22": {
-        "Monday": [],
-        "Tuesday": [
-          {
-            "period": "P4",
-            "time": "11:00 - 12:00",
-            "subject": "HPC",
-            "teacher": "Dr. Rinku Datta Rakshit",
-            "room": "C25-B119"
-          }
-        ],
-        "Wednesday": [],
-        "Thursday": [
-          {
-            "period": "P6",
-            "time": "13:00 - 14:00",
-            "subject": "HPC",
-            "teacher": "Dr. Rinku Datta Rakshit",
-            "room": "C25-A311"
-          }
-        ],
-        "Friday": [
+        "Monday": [
           {
             "period": "P5",
             "time": "12:00 - 13:00",
             "subject": "HPC",
             "teacher": "Dr. Rinku Datta Rakshit",
-            "room": "C25-A314"
+            "room": "C25-A208"
           }
-        ]
+        ],
+        "Tuesday": [
+          {
+            "period": "P6",
+            "time": "13:00 - 14:00",
+            "subject": "HPC",
+            "teacher": "Dr. Rinku Datta Rakshit",
+            "room": "C25-A011"
+          }
+        ],
+        "Wednesday": [
+          {
+            "period": "P5",
+            "time": "12:00 - 13:00",
+            "subject": "HPC",
+            "teacher": "Dr. Rinku Datta Rakshit",
+            "room": "C25-B122"
+          }
+        ],
+        "Thursday": [],
+        "Friday": []
       },
       "HPC23": {
         "Monday": [],
@@ -10059,7 +10059,7 @@
             "time": "12:00 - 13:00",
             "subject": "IPA",
             "teacher": "Ms. Shubhangi Shreya",
-            "room": "C25-B008"
+            "room": "C25-B201"
           }
         ],
         "Thursday": [],
@@ -10455,7 +10455,7 @@
             "time": "13:00 - 14:00",
             "subject": "IPA",
             "teacher": "Ms. Shubhangi Shreya",
-            "room": "C25-B001"
+            "room": "C25-B115"
           }
         ],
         "Friday": [
@@ -10469,35 +10469,35 @@
         ]
       },
       "IPA15": {
-        "Monday": [],
-        "Tuesday": [
-          {
-            "period": "P4",
-            "time": "11:00 - 12:00",
-            "subject": "IPA",
-            "teacher": "Mr. Sayan Datta",
-            "room": "C25-B209"
-          }
-        ],
-        "Wednesday": [],
-        "Thursday": [
-          {
-            "period": "P6",
-            "time": "13:00 - 14:00",
-            "subject": "IPA",
-            "teacher": "Mr. Sayan Datta",
-            "room": "C25-B007"
-          }
-        ],
-        "Friday": [
+        "Monday": [
           {
             "period": "P5",
             "time": "12:00 - 13:00",
             "subject": "IPA",
             "teacher": "Mr. Sayan Datta",
-            "room": "C25-B110"
+            "room": "C25-B208"
           }
-        ]
+        ],
+        "Tuesday": [
+          {
+            "period": "P6",
+            "time": "13:00 - 14:00",
+            "subject": "IPA",
+            "teacher": "Mr. Sayan Datta",
+            "room": "C25-B106"
+          }
+        ],
+        "Wednesday": [
+          {
+            "period": "P5",
+            "time": "12:00 - 13:00",
+            "subject": "IPA",
+            "teacher": "Mr. Sayan Datta",
+            "room": "C25-B210"
+          }
+        ],
+        "Thursday": [],
+        "Friday": []
       },
       "IPA16": {
         "Monday": [],
@@ -10696,33 +10696,33 @@
       "CD2": {
         "Monday": [
           {
-            "period": "P6",
-            "time": "13:00 - 14:00",
+            "period": "P4",
+            "time": "11:00 - 12:00",
             "subject": "CD",
             "teacher": "Dr. Tanmoy Maitra",
-            "room": "C25-A109"
+            "room": "C25-B219"
           }
         ],
-        "Tuesday": [
+        "Tuesday": [],
+        "Wednesday": [],
+        "Thursday": [
           {
             "period": "P5",
             "time": "12:00 - 13:00",
             "subject": "CD",
             "teacher": "Dr. Tanmoy Maitra",
-            "room": "C25-A311"
+            "room": "C25-B116"
           }
         ],
-        "Wednesday": [
+        "Friday": [
           {
             "period": "P6",
             "time": "13:00 - 14:00",
             "subject": "CD",
             "teacher": "Dr. Tanmoy Maitra",
-            "room": "C25-A116"
+            "room": "C25-B106"
           }
-        ],
-        "Thursday": [],
-        "Friday": []
+        ]
       },
       "CD3": {
         "Monday": [
@@ -10789,33 +10789,33 @@
       "CD5": {
         "Monday": [
           {
-            "period": "P6",
-            "time": "13:00 - 14:00",
+            "period": "P4",
+            "time": "11:00 - 12:00",
             "subject": "CD",
             "teacher": "Dr. Kasturi Routray",
-            "room": "C25-A201"
+            "room": "C25-B220"
           }
         ],
-        "Tuesday": [
+        "Tuesday": [],
+        "Wednesday": [],
+        "Thursday": [
           {
             "period": "P5",
             "time": "12:00 - 13:00",
             "subject": "CD",
             "teacher": "Dr. Kasturi Routray",
-            "room": "C25-A315"
+            "room": "C25-B117"
           }
         ],
-        "Wednesday": [
+        "Friday": [
           {
             "period": "P6",
             "time": "13:00 - 14:00",
             "subject": "CD",
             "teacher": "Dr. Kasturi Routray",
-            "room": "C25-A206"
+            "room": "C25-B108"
           }
-        ],
-        "Thursday": [],
-        "Friday": []
+        ]
       },
       "CD6": {
         "Monday": [
@@ -10907,192 +10907,6 @@
             "subject": "CD",
             "teacher": "Dr. Anjan Bandyopadhyay",
             "room": "C25-A113"
-          }
-        ]
-      },
-      "CD9": {
-        "Monday": [
-          {
-            "period": "P4",
-            "time": "11:00 - 12:00",
-            "subject": "CD",
-            "teacher": "Mr. Ajay Anand",
-            "room": "C25-A316"
-          }
-        ],
-        "Tuesday": [],
-        "Wednesday": [],
-        "Thursday": [
-          {
-            "period": "P5",
-            "time": "12:00 - 13:00",
-            "subject": "CD",
-            "teacher": "Mr. Ajay Anand",
-            "room": "C25-A210"
-          }
-        ],
-        "Friday": [
-          {
-            "period": "P6",
-            "time": "13:00 - 14:00",
-            "subject": "CD",
-            "teacher": "Mr. Ajay Anand",
-            "room": "C25-A114"
-          }
-        ]
-      },
-      "CD10": {
-        "Monday": [
-          {
-            "period": "P4",
-            "time": "11:00 - 12:00",
-            "subject": "CD",
-            "teacher": "Prof. (Dr.) Abhishek Ray",
-            "room": "C25-A318"
-          }
-        ],
-        "Tuesday": [],
-        "Wednesday": [],
-        "Thursday": [
-          {
-            "period": "P5",
-            "time": "12:00 - 13:00",
-            "subject": "CD",
-            "teacher": "Prof. (Dr.) Abhishek Ray",
-            "room": "C25-A211"
-          }
-        ],
-        "Friday": [
-          {
-            "period": "P6",
-            "time": "13:00 - 14:00",
-            "subject": "CD",
-            "teacher": "Prof. (Dr.) Abhishek Ray",
-            "room": "C25-A201"
-          }
-        ]
-      },
-      "CD11": {
-        "Monday": [
-          {
-            "period": "P4",
-            "time": "11:00 - 12:00",
-            "subject": "CD",
-            "teacher": "Dr. Tanik Saikh",
-            "room": "C25-B013"
-          }
-        ],
-        "Tuesday": [],
-        "Wednesday": [],
-        "Thursday": [
-          {
-            "period": "P5",
-            "time": "12:00 - 13:00",
-            "subject": "CD",
-            "teacher": "Dr. Tanik Saikh",
-            "room": "C25-A213"
-          }
-        ],
-        "Friday": [
-          {
-            "period": "P6",
-            "time": "13:00 - 14:00",
-            "subject": "CD",
-            "teacher": "Dr. Tanik Saikh",
-            "room": "C25-A206"
-          }
-        ]
-      },
-      "CD12": {
-        "Monday": [
-          {
-            "period": "P4",
-            "time": "11:00 - 12:00",
-            "subject": "CD",
-            "teacher": "Dr. Jyotiranjan Swain",
-            "room": "C25-B015"
-          }
-        ],
-        "Tuesday": [],
-        "Wednesday": [],
-        "Thursday": [
-          {
-            "period": "P5",
-            "time": "12:00 - 13:00",
-            "subject": "CD",
-            "teacher": "Dr. Jyotiranjan Swain",
-            "room": "C25-A214"
-          }
-        ],
-        "Friday": [
-          {
-            "period": "P6",
-            "time": "13:00 - 14:00",
-            "subject": "CD",
-            "teacher": "Dr. Jyotiranjan Swain",
-            "room": "C25-A207"
-          }
-        ]
-      },
-      "CD13": {
-        "Monday": [
-          {
-            "period": "P4",
-            "time": "11:00 - 12:00",
-            "subject": "CD",
-            "teacher": "Mr. Prabhu Prasad Dev",
-            "room": "C25-B016"
-          }
-        ],
-        "Tuesday": [],
-        "Wednesday": [],
-        "Thursday": [
-          {
-            "period": "P5",
-            "time": "12:00 - 13:00",
-            "subject": "CD",
-            "teacher": "Mr. Prabhu Prasad Dev",
-            "room": "C25-A215"
-          }
-        ],
-        "Friday": [
-          {
-            "period": "P6",
-            "time": "13:00 - 14:00",
-            "subject": "CD",
-            "teacher": "Mr. Prabhu Prasad Dev",
-            "room": "C25-A208"
-          }
-        ]
-      },
-      "CD14": {
-        "Monday": [
-          {
-            "period": "P4",
-            "time": "11:00 - 12:00",
-            "subject": "CD",
-            "teacher": "Dr. Suman Majumder",
-            "room": "C25-B017"
-          }
-        ],
-        "Tuesday": [],
-        "Wednesday": [],
-        "Thursday": [
-          {
-            "period": "P5",
-            "time": "12:00 - 13:00",
-            "subject": "CD",
-            "teacher": "Dr. Suman Majumder",
-            "room": "C25-A216"
-          }
-        ],
-        "Friday": [
-          {
-            "period": "P6",
-            "time": "13:00 - 14:00",
-            "subject": "CD",
-            "teacher": "Dr. Suman Majumder",
-            "room": "C25-A209"
           }
         ]
       }
@@ -12029,6 +11843,161 @@
             "room": "C25-A313"
           }
         ]
+      },
+      "DMDW21": {
+        "Monday": [
+          {
+            "period": "P4",
+            "time": "11:00 - 12:00",
+            "subject": "DMDW",
+            "teacher": "",
+            "room": "C25-B217"
+          }
+        ],
+        "Tuesday": [],
+        "Wednesday": [],
+        "Thursday": [
+          {
+            "period": "P5",
+            "time": "12:00 - 13:00",
+            "subject": "DMDW",
+            "teacher": "",
+            "room": "C25-B115"
+          }
+        ],
+        "Friday": [
+          {
+            "period": "P6",
+            "time": "13:00 - 14:00",
+            "subject": "DMDW",
+            "teacher": "",
+            "room": "C25-B001"
+          }
+        ]
+      },
+      "DMDW22": {
+        "Monday": [
+          {
+            "period": "P6",
+            "time": "13:00 - 14:00",
+            "subject": "DMDW",
+            "teacher": "",
+            "room": "C25-A207"
+          }
+        ],
+        "Tuesday": [
+          {
+            "period": "P5",
+            "time": "12:00 - 13:00",
+            "subject": "DMDW",
+            "teacher": "",
+            "room": "C25-A301"
+          }
+        ],
+        "Wednesday": [
+          {
+            "period": "P6",
+            "time": "13:00 - 14:00",
+            "subject": "DMDW",
+            "teacher": "",
+            "room": "C25-A007"
+          }
+        ],
+        "Thursday": [],
+        "Friday": []
+      },
+      "DMDW23": {
+        "Monday": [
+          {
+            "period": "P6",
+            "time": "13:00 - 14:00",
+            "subject": "DMDW",
+            "teacher": "",
+            "room": "C25-A208"
+          }
+        ],
+        "Tuesday": [
+          {
+            "period": "P5",
+            "time": "12:00 - 13:00",
+            "subject": "DMDW",
+            "teacher": "",
+            "room": "C25-B206"
+          }
+        ],
+        "Wednesday": [
+          {
+            "period": "P6",
+            "time": "13:00 - 14:00",
+            "subject": "DMDW",
+            "teacher": "",
+            "room": "C25-B010"
+          }
+        ],
+        "Thursday": [],
+        "Friday": []
+      },
+      "DMDW24": {
+        "Monday": [
+          {
+            "period": "P6",
+            "time": "13:00 - 14:00",
+            "subject": "DMDW",
+            "teacher": "",
+            "room": "C25-B107"
+          }
+        ],
+        "Tuesday": [
+          {
+            "period": "P5",
+            "time": "12:00 - 13:00",
+            "subject": "DMDW",
+            "teacher": "",
+            "room": "C25-B207"
+          }
+        ],
+        "Wednesday": [
+          {
+            "period": "P6",
+            "time": "13:00 - 14:00",
+            "subject": "DMDW",
+            "teacher": "",
+            "room": "C25-B015"
+          }
+        ],
+        "Thursday": [],
+        "Friday": []
+      },
+      "DMDW25": {
+        "Monday": [
+          {
+            "period": "P6",
+            "time": "13:00 - 14:00",
+            "subject": "DMDW",
+            "teacher": "",
+            "room": "C25-B108"
+          }
+        ],
+        "Tuesday": [
+          {
+            "period": "P5",
+            "time": "12:00 - 13:00",
+            "subject": "DMDW",
+            "teacher": "",
+            "room": "C25-B208"
+          }
+        ],
+        "Wednesday": [
+          {
+            "period": "P6",
+            "time": "13:00 - 14:00",
+            "subject": "DMDW",
+            "teacher": "",
+            "room": "C25-B016"
+          }
+        ],
+        "Thursday": [],
+        "Friday": []
       }
     },
     "PSIOT": {
